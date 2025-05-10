@@ -28,107 +28,95 @@ print(sum)
  
 
 EX: 7.2 TYPES OF RECURSIONS
-### Aim: To Write a Python Program to find the sum of all digits in a number using recursion
+### Aim: To Write a Python Program to display first n natural numbers in reverse order using tail recursion.
+
 ### Algorithm:
-STEP 1: Start.
+Step1:Get input from the user.
+Step2:Define a function reverse_natural_numbers(n, current).
+Step3:Base Case: If current is zero, stop the recursion.
+Step4:Print current and make a recursive call by decrementing current.
+Step5:Call the function with n as the initial value of current.
+Step6:Terminate the program.
 
-STEP 2: Define a function.
 
-STEP 3: Create a recursive case in the first line of function for head recursion.
-
-STEP 4: Print the result.
-
-STEP 5: Stop.
 ### Program:
 ```
 def fun(n):
-     if (n >0):
-          fun(n - 2)
-      print(n-1, end=" ")
-x = int(input())
-if(x%2==0):
-     fun(x)
-else:
-     fun(x+1)
-
+    if n<1:
+        return
+    else:
+        print(n,end=" ")
+        return(fun(n-1))
+n=int(input())
+fun(n)
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/c4d6416f-d333-49c1-9dd5-0f774cdabb03)
+![image](https://github.com/user-attachments/assets/983fc9e6-177b-4bb5-9d0c-f64d2fb1fb23)
 
 ###Result: Thus, the given program is implemented and executed successfully.
- 
 
 
 EX: 7.3 TAYLOR SERIES
 
 ###Aim: To python program to evaluate the series using recursion by collecting the x and n values from the user.
 ### ALGORITHM:
-STEP 1: Start.
+Step1:Read values x and n from the user.
+Step2:Define Recursive Function: fun(x, n)
+Step3:Base Case: If n == 0, return 1 (since the series starts from 1).
+Step4:Recursive Case: Compute (2^n) * (x^n) + fun(x, n-1), recursively calling the function with n-1.
+Step5:Call the function and print the result.
+Step6:Terminate the program.
 
-STEP 2: Create a variable x and n.
-
-STEP 3: Get the values of x and n from user.
-
-STEP 4: Create a base case and recursive case to calculate the result.
-
-STEP 5: Print the result.
-
-STEP 6: Stop.
 ### Program:
 ```
-def series(x,n):
-         if n==0:
-            return 1
-         else:
-            return x**n/n+series(x,n-1)
-x = int(input())
-n = int(input())
-print(series(x,n))
+def fun(x,n):
+    if(n==0):
+        return 1 
+    else:
+        return ((2**n)*(x**n)+fun(x,n-1))
+x=int(input())
+n=int(input())
+print(fun(x,n))
+
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/1d00b1a4-cecb-466f-8593-805f00d27461)
+![image](https://github.com/user-attachments/assets/31f3f559-0f21-4bdb-b89f-ecb1ca57083e)
 
- 
 ### Result: Thus, the given program is implemented and executed successfully .
- 
+
+
 
 EX: 7.4 Solve by recursion relation
 
-### Aim: To Write a Python Program to find whether a string is a palindrome or not using recursion
+### Aim: To Write a Python Program to to count the consonants in a string using recursion.
 
 ### Algorithm:
-STEP 1: Start.
-
-STEP 2: Define a function.
-
-STEP 3: Create a base case and recursive case to calculate the result.
-
-STEP 4: Create a variable and get input from user.
-
-STEP 5 : Call the function.
-
-STEP 6: Print the result.
-
-STEP 7: Stop.
+STEP 1: Start the program.
+STEP 2: Read a string from the user.
+STEP 3:Define Recursive Function: count_consonants(s, index)
+STEP 4:Base Case: If index reaches the end of the string, return 0.
+STEP 5:Check if s[index] is a consonant (i.e., an alphabet character that is not a vowel).
+STEP 6:If it's a consonant, add 1 to the recursive call for the next index.
+STEP 7:Otherwise, proceed to the next index without adding 1.
+STEP 8:Start the recursion from index 0 and print the result.
+STEP 9:Terminate the program.
 
 ### Program:
 ```
-def is_palindrome(word):
-      if len(word)<1:
-            return True
-      else:
-            if word[0]==word[-1]:
-                 return is_palindrome(word[1:-1])
-             else:
-                  return False
-word = str(input())
-if is_palindrome(word)==True:
-        print("String is a palindrome")
-else:
-        print("String is not a palindrome")
+def consonant(c):
+    c=c.upper()
+    return (not(c=='A' or c=='E' or c=='I' or c=='O' or c=='U'))
+def total(string,n):
+    if n==1:
+        return consonant(string[0])
+    return total(string,n-1)+consonant(string[n-1])
+string=input()
+print(total(string,len(string)))
+
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/d30ef836-1901-448a-a146-dc905fdc3198)
+![image](https://github.com/user-attachments/assets/23c10981-ac19-43f2-ada4-da4553fd105e)
+
 
 ### Result: Thus, the given program is implemented and executed successfully .
  
