@@ -115,7 +115,8 @@ print(total(string,len(string)))
 
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/23c10981-ac19-43f2-ada4-da4553fd105e)
+![image](https://github.com/user-attachments/assets/d303818e-d32f-4fb6-a4d0-1c79b806d904)
+
 
 
 ### Result: Thus, the given program is implemented and executed successfully .
