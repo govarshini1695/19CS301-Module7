@@ -115,7 +115,8 @@ print(total(string,len(string)))
 
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/d303818e-d32f-4fb6-a4d0-1c79b806d904)
+![image](https://github.com/user-attachments/assets/13328170-ec0c-487a-b944-fcfa16d4f6d5)
+
 
 
 
